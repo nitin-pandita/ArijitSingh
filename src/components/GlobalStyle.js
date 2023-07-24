@@ -49,6 +49,18 @@ const GlobalStyle = createGlobalStyle`
             color : #ccc;
             font-size : 1.4rem;
     }
+    a {
+        text-decoration: none;
+        color: white;
+    }
+    ul {
+        display: flex;
+        align-items: center;
+    }
+        li {
+        padding-left: 6rem;
+        position: relative;
+    }
 `;
 
 export default GlobalStyle;
