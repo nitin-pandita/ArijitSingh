@@ -29,7 +29,7 @@ const GlobalStyle = createGlobalStyle`
     }
     h2 {
             font-weight : lighter;
-            font-size : 4rem;
+            font-size : 3.6rem;
     }
     h3 {
             color : white;
@@ -40,7 +40,7 @@ const GlobalStyle = createGlobalStyle`
     span {
         font-weight : bold;
         color : #23d997;
-            font-size : 4rem;
+            font-size : 3.6rem;
 
 
     }
@@ -60,6 +60,7 @@ const GlobalStyle = createGlobalStyle`
         li {
         padding-left: 6rem;
         position: relative;
+        list-style: none;
     }
 `;
 

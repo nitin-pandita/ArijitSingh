@@ -1,14 +1,15 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { styled } from 'styled-components'
+
 const Navbar = () => {
     return (
         <Nav>
-            <h1><a href="#">Arijit Singh</a></h1>
+            <Logo><Link to='/'>Arijit Singh</Link></Logo>
             <ul>
-                <li><a href="#">About Arijit Singh</a></li>
-                <li><a href="#">Songs</a></li>
-                <li><a href="#">Popular Songs</a></li>
-                <li><a href="#">Socials</a></li>
+                <li><Link to='/about'>About</Link></li>
+                <li><Link to='/list'>Popular Songs</Link></li>
+                <li><Link to='/social'>Socials</Link></li>
             </ul>
 
         </Nav>
@@ -24,6 +25,11 @@ const Nav = styled.div`
     padding: 1rem 10rem;
     background : #282828
 
+`;
+const Logo = styled.div`
+    font-weight: lighter;
+    font-size: 1.7rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 `
 
-export default Navbar
+export default Navbar;

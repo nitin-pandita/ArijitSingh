@@ -1,9 +1,9 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import services from '../img/services.jpg'
 import { styled } from 'styled-components';
 import { faFire, faHeartCircleCheck, faHeartPulse } from '@fortawesome/free-solid-svg-icons';
 import { faMusic } from '@fortawesome/free-solid-svg-icons';
+import services2 from '../img/services2.png'
 import { About, Description, Image } from '../styles';
 const Services = () => {
     return (
@@ -32,22 +32,17 @@ const Services = () => {
                         </div>
                         <p>Never forget the vocals of this amazing man</p>
                     </Card>
-                    <Card>
-                        <div className="icon">
-                            <CustomFontAwesomeIcon icon={faFire} size='3x' />
-                            <h3>FreeStyle voice</h3>
-                        </div>
-                        <p>His Freestyle voice so beautiful makes everyone day</p>
-                    </Card>
+
                 </Cards>
             </Description>
-            <Image>
-                <img src={services} alt="" />
-            </Image>
+            <Images>
+                <img src={services2} alt="" />
+            </Images>
         </Service>
     )
 }
 const Service = styled(About)`
+    min-height: 100vh;
     h2 {
         padding-bottom: 5rem;
 
@@ -78,6 +73,10 @@ const Card = styled.div`
 
         }
     }
+
+`
+
+const Images = styled(Image)`
 
 `
 const CustomFontAwesomeIcon = styled(FontAwesomeIcon)`

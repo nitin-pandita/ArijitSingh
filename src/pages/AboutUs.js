@@ -8,7 +8,6 @@ import Navbar from '../components/Navbar'
 const AboutUs = () => {
     return (
         <>
-            <Navbar />
             <AboutSection />
             <Services />
             <FaqSection />

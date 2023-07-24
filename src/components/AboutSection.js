@@ -14,7 +14,7 @@ const AboutSection = () => {
                     </Hide>
                 </div>
                 <p>Contact us for any query</p>
-                <button>Contact Us</button>
+                <button>Socials</button>
             </Description>
             <Image>
                 <img src={home} alt="Arijit Singh" />
