@@ -1,28 +1,61 @@
 import React from 'react'
 import home from '../img/home.jpg'
+import { styled } from 'styled-components'
+
 const AboutSection = () => {
     return (
-        <div>
-            <div className="description">
+        <About>
+            <Description>
                 <div className="title">
-                    <div className="hide">
-                        <h1>We work to make</h1>
-                    </div>
-                    <div className="hide">
-                        <h1>your <span>dreams</span> come</h1>
-                    </div>
-                    <div className="hide">
-                        <h1>true</h1>
-                    </div>
+                    <Hide>
+                        <h2>The One and Only</h2>
+                    </Hide>
+                    <Hide>
+                        <h2>Melodies <span>Arijit Singh</span></h2>
+                    </Hide>
                 </div>
                 <p>Contact us for any query</p>
                 <button>Contact Us</button>
-            </div>
-            <div className="image">
+            </Description>
+            <Image>
                 <img src={home} alt="Arjit Singh" />
-            </div>
-        </div>
+            </Image>
+        </About>
     )
 }
+//? styled component
+const About = styled.div`
+    min-height : 90vh;
+    display : flex;
+    align-items: center;
+    justify-content: space-between;
+    padding : 5rem 10rem;
+    color : white; 
+    
 
-export default AboutSection
+`;
+
+const Description = styled.div`
+    padding-right: 5rem;
+    flex: 1;
+    h2 {
+        font-weight: lighter;
+    }
+`
+
+const Image = styled.div`
+    flex: 1;
+    overflow: hidden;
+    img {
+        width: 100%;
+        height: 80vh;
+        object-fit: cover;
+    }
+`
+const Hide = styled.div`
+    overflow: hidden;
+
+`
+
+
+export default AboutSection;
