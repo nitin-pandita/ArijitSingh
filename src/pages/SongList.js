@@ -11,21 +11,21 @@ const SongList = () => {
             <Cover>
                 <h2>Agar tum saath ho</h2>
                 <div className="line"></div>
-                <Link>
+                <Link to='/list/cover1'>
                     <img src={cover1} alt="" />
                 </Link>
             </Cover>
             <Cover>
                 <h2>Ae Dil hai mushkil</h2>
                 <div className="line"></div>
-                <Link>
+                <Link to='/list/cover4'>
                     <img src={cover4} alt="" />
                 </Link>
             </Cover>
             <Cover>
                 <h2>Ve Kamilya</h2>
                 <div className="line"></div>
-                <Link>
+                <Link to='/list/cover3'>
                     <img src={cover3} alt="" />
                 </Link>
             </Cover>
@@ -38,6 +38,7 @@ const Songs = styled.div`
     min-height: 100vh;
     padding: 5rem 10rem;
     overflow: hidden;
+    color: white;
     h2 {
         padding: 1rem 0rem;
     }

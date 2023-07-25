@@ -13,6 +13,7 @@ import Socials from './pages/Socials'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import { styled } from 'styled-components';
+import AboutSong from './pages/AboutSong';
 const App = () => {
   return (
     <div className="app">
@@ -22,6 +23,7 @@ const App = () => {
         <Route path='/' element={<AboutUs />} />
         <Route path='/about' element={<AboutArijit />} />
         <Route path='/list' element={<SongList />} />
+        <Route path='/list/:id' element={<AboutSong />} />
         <Route path='/social' element={<Socials />} />
       </Routes>
     </div>
