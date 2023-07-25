@@ -5,9 +5,13 @@ import cover3 from '../img/cover3.jpg'
 import cover4 from '../img/cover4.jpg'
 import { styled } from 'styled-components'
 import { Link } from 'react-router-dom'
+// Animation
+import { motion } from 'framer-motion'
+import { Animation } from '../Animation'
+
 const SongList = () => {
     return (
-        <Songs>
+        <Songs style={{ background: "#fff" }} exit="exit" variants={Animation} initial="hidden" animate="show">
             <Cover>
                 <h2>Agar tum saath ho</h2>
                 <div className="line"></div>
@@ -34,11 +38,10 @@ const SongList = () => {
     )
 }
 
-const Songs = styled.div`
+const Songs = styled(motion.div)`
     min-height: 100vh;
     padding: 5rem 10rem;
     overflow: hidden;
-    color: white;
     h2 {
         padding: 1rem 0rem;
     }

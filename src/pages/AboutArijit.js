@@ -5,10 +5,12 @@ import card2 from '../img/arijit singh 2.jpg'
 import live from '../img/live.jpg'
 import { styled } from 'styled-components'
 import { About, Description } from '../styles'
+import { motion } from 'framer-motion'
+import { Animation } from '../Animation'
 const AboutArijit = () => {
     return (
         <>
-            <AboutArj>
+            <AboutArj exit="exit" variants={Animation} initial="hidden" animate="show">
                 <div className="main-img">
                     <img src={main} alt="main image" />
                 </div>
