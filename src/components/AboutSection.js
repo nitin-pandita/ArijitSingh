@@ -1,41 +1,36 @@
-import React from 'react'
-import home from '../img/home.jpg'
-import { About, Description, Hide, Image } from '../styles'
-import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
+import React from "react";
+import home from "../img/home.jpg";
+import home2 from "../img/home2.jpg";
+import { About, Description, Hide, Image } from "../styles";
+import { motion } from "framer-motion";
+import Wave from "./Wave";
+import { fade } from "../Animation";
+import { titleAnim } from "../Animation";
+import { PhotoAnim } from "../Animation";
 const AboutSection = () => {
-
-    const titleAnim = {
-        hidden: { opacity: 0 },
-        show: { opacity: 1, transition: { duration: 2 } },
-    }
-    const container = {
-        hidden: { x: 100 },
-        show: { x: 0, transition: { duration: 0.75 } }
-
-    }
-    return (
-        <About>
-            <Description>
-                <motion.div className="title">
-                    <Hide>
-                        <motion.h2>The One and Only</motion.h2>
-                    </Hide>
-                    <Hide>
-                        <h2>Melodies, <span>Arijit Singh</span></h2>
-                    </Hide>
-                </motion.div>
-                <p>Contact us for any query</p>
-                <button>Socials</button>
-            </Description>
-            <Image>
-                <img src={home} alt="Arijit Singh" />
-            </Image>
-        </About>
-    )
-}
+  return (
+    <About>
+      <Description>
+        <motion.div>
+          <Hide>
+            <motion.h2 variants={titleAnim}>The One and Only</motion.h2>
+          </Hide>
+          <Hide>
+            <motion.h2 variants={titleAnim}>
+              Melodies, <span>Arijit Singh</span>
+            </motion.h2>
+          </Hide>
+        </motion.div>
+        <motion.p variants={fade}>Contact us for any query</motion.p>
+        <motion.button variants={fade}>Socials</motion.button>
+      </Description>
+      <Image variants={PhotoAnim}>
+        <img src={home2} alt="Arijit Singh" />
+      </Image>
+      <Wave />
+    </About>
+  );
+};
 //? styled component
-
-
 
 export default AboutSection;

@@ -1,109 +1,101 @@
-import React from 'react'
-import card1 from '../img/desktop-wallpaper-arijit-singh.jpg'
-import main from '../img/Arijit Singh.jpg'
-import card2 from '../img/arijit singh 2.jpg'
-import live from '../img/live.jpg'
-import { styled } from 'styled-components'
-import { About, Description } from '../styles'
-import { motion } from 'framer-motion'
-import { Animation } from '../Animation'
+import React from "react";
+import card1 from "../img/desktop-wallpaper-arijit-singh.jpg";
+import main from "../img/Arijit Singh.jpg";
+import card2 from "../img/arijit singh 2.jpg";
+import live from "../img/live.jpg";
+import { styled } from "styled-components";
+// import { About, Description } from "../styles";
+import { motion } from "framer-motion";
+import { Sliders, Animation, PhotoAnim, LineAnim, fade } from "../Animation";
 const AboutArijit = () => {
-    return (
-        <>
-            <AboutArj exit="exit" variants={Animation} initial="hidden" animate="show">
-                <div className="main-img">
-                    <img src={main} alt="main image" />
-                </div>
-                <div className="cards">
-                    <div className="card">
-                        <img src={card1} alt="" />
-                        <img src={card2} alt="" />
-                    </div>
-                    <Des>
-                        <h1 >Journey</h1>
-                        <div className="line"></div>
-
-                        <p>Arijit's journey to stardom began with his appearance in the reality singing show "Fame Gurukul" in 2005. Although he did not win the competition, it opened doors for him in the music industry. His breakthrough came in 2013 when he sang "Tum Hi Ho" for the Bollywood movie "Aashiqui 2." The song became an instant sensation, catapulting Arijit to fame and establishing him as one of the most sought-after playback singers in the Indian film industry.</p>
-                        <p>Since then, Arijit Singh has consistently delivered one chartbuster after another, enchanting audiences with his versatile voice and emotional depth. His ability to convey a wide range of emotions through his singing has earned him a special place in the hearts of music enthusiasts. Whether it's romantic ballads, peppy dance numbers, or soul-stirring melodies, Arijit's voice adds a magical touch to every song he sings.</p>
-                    </Des>
-                </div>
-            </AboutArj>
-            <Live>
-                <div className="big-img">
-                    <img src={live} alt="" />
-                </div>
-                <div className="description">
-                    <h1>Filmfare <span>Awards</span></h1>
-                    <div className="line"></div>
-                    <p>Arijit Singh is known for his soulful and captivating live performances, and the Filmfare Awards, being one of the most prestigious film awards ceremonies in India, has often featured his talents on its stage.
-
-                        His performances at the Filmfare Awards have been marked by powerful renditions of his hit songs from various Bollywood movies. With his emotive voice and impeccable control over the nuances of each song, Arijit has the ability to transport the audience into a world of emotions.
-
-                        Whether it's a romantic ballad that touches the heart or a peppy track that makes the audience dance along, Arijit Singh's performances at the Filmfare Awards have left a lasting impression on the viewers. His ability to connect with the audience and convey the emotions of the songs he sings has made him a favorite among both fans and critics.
-
-                        Arijit's stage presence, combined with his melodious voice, has made his performances at the Filmfare Awards and other prestigious award ceremonies truly memorable moments for music enthusiasts and Bollywood lovers alike.
-
-                        Since award ceremonies like the Filmfare Awards are live events, the excitement of Arijit Singh's performances can only be truly experienced by those who are present at the venue or watch it live on television. To witness his most recent performances and stay updated on his appearances, it's best to follow his official social media channels and official announcements.</p>
-                </div>
-            </Live>
-        </>
-
-    )
-}
-
-const AboutArj = styled(About)`
-    .cards {
-        display: flex;
-        flex-direction: column;
-        margin-left:5rem;
+  return (
+    <About variants={Animation} initial="hidden" animate="show">
+      <Frame1 variants={Sliders}></Frame1>
+      <Frame2 variants={Sliders}></Frame2>
+      <Frame2 variants={Sliders}></Frame2>
+      <Frame3 variants={Sliders}></Frame3>
+      <Frame4 variants={Sliders}></Frame4>
+      <div className="main-img">
+        <motion.img variants={PhotoAnim} src={main} alt="" />
+      </div>
+      <div className="container">
+        <div className="img-card">
+          <motion.img variants={PhotoAnim} src={card1} alt="" />
+          <motion.img variants={PhotoAnim} src={card2} alt="" />
+        </div>
+        <div className="description">
+          <motion.h2 variants={fade}>Journey</motion.h2>
+          <motion.div variants={LineAnim} className="line"></motion.div>
+          <motion.p variants={fade}>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque sint
+            veniam unde ut ratione blanditiis! Alias, facere? Quod, in!
+            Asperiores culpa assumenda quibusdam minima, aspernatur ut id hic
+            ea, dolore nulla ex necessitatibus iste?
+          </motion.p>
+        </div>
+      </div>
+    </About>
+  );
+};
+// Animation Frame
+const Frame1 = styled(motion.div)`
+  position: fixed;
+  top: 10%;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #fffebf;
+  z-index: 2;
+`;
+const Frame2 = styled(Frame1)`
+  background: #ff8efb;
+`;
+const Frame3 = styled(Frame1)`
+  background: #8ed2ff;
+`;
+const Frame4 = styled(Frame1)`
+  background: #8effa0;
+`;
+// styling part
+const About = styled(motion.div)`
+  display: flex;
+  padding: 5rem 10rem;
+  justify-content: space-between;
+  min-height: 80vh;
+  .main-img {
+    height: 76vh;
+    width: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
-    .card {
-        display: flex;
-        justify-content: space-between;
-    }
-    .card img {
-        width: 40%;
-        object-fit: cover;
-    }
-`
-const Des = styled(Description)`
-    h1 {
-        text-align: center;
-        margin: 2rem 0rem;
-        color: #23d997;
-        font-size: 3.5rem;
-    }
-        .line {
-        height: 0.2rem;
-        background: white;
-        width: 100%;
-    }
-`
-const Live = styled.div`
-    width: 80%;
-    margin: auto;
+  }
+  .img-card {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    h1 {
-        text-align: center;
-        font-size: 2.8rem;
-        font-weight: bold;
-        color: white;
-        padding-bottom: 20px;
+    width: 100%;
+    height: 40vh;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      margin-left: 40px;
     }
-    span {
-        color: #23d997;
-
+  }
+  .description {
+    padding-left: 4rem;
+    h2 {
+      color: white;
+      text-align: center;
+      padding: 1rem;
     }
     .line {
-        height: 0.2rem;
-        background: white;
-        width: 100%;
+      width: 100%;
+      height: 0.5rem;
+      background: #23d997;
     }
-`
+  }
+`;
 
-
-export default AboutArijit
+export default AboutArijit;
