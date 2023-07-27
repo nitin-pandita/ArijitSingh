@@ -1,3 +1,6 @@
+# Project view
+![image](https://github.com/nitin-pandita/ArijitSingh/assets/91310284/121425f4-69db-4d2c-9a4d-d4f27ea73f9d)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
