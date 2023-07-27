@@ -69,6 +69,11 @@ const About = styled(motion.div)`
   display: flex;
   padding: 5rem 10rem;
   min-height: 90vh;
+  @media (max-width: 1300px) {
+    display: block;
+    flex-direction: column;
+    padding: 2rem 2rem;
+  }
   .main-img {
     height: 76vh;
     width: 100%;
@@ -76,6 +81,14 @@ const About = styled(motion.div)`
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+    @media (max-width: 1300px) {
+      padding: 0;
+      img {
+        width: 100%;
+        padding-bottom: 1rem;
+        object-fit: contain;
+      }
     }
   }
   .img-card {
@@ -88,6 +101,11 @@ const About = styled(motion.div)`
       height: 100%;
       object-fit: cover;
       margin-left: 40px;
+    }
+    @media (max-width: 1300px) {
+      img {
+        width: 40%;
+      }
     }
   }
   .description {

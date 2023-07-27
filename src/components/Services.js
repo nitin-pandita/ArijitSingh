@@ -47,7 +47,6 @@ const Services = () => {
   );
 };
 const Service = styled(About)`
-  min-height: 100vh;
   h2 {
     padding-bottom: 5rem;
   }
@@ -60,6 +59,9 @@ const Service = styled(About)`
 const Cards = styled.div`
   display: flex;
   flex-wrap: wrap;
+  @media (max-width: 1300px) {
+    justify-content: center;
+  }
 `;
 
 const Card = styled.div`

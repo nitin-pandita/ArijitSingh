@@ -74,6 +74,9 @@ const Songs = styled(motion.div)`
   h2 {
     padding: 1rem 0rem;
   }
+  @media (max-width: 1300px) {
+    padding: 2rem 2rem;
+  }
 `;
 const Hide = styled.div`
   overflow: hidden;
@@ -85,6 +88,7 @@ const Cover = styled.div`
     background: #28d997;
     margin-bottom: 3rem;
   }
+
   img {
     width: 100%;
     height: 70vh;
