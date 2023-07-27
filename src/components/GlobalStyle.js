@@ -5,6 +5,13 @@ const GlobalStyle = createGlobalStyle`
         padding : 0;
         box-sizing : border-box;
     }
+
+    // MEdia Query 
+    html {
+        @media (max-width : 1500px){
+            font-size: 75%;
+        }
+    }
     body {
         font-family: 'Poppins', sans-serif;
 
@@ -58,12 +65,7 @@ const GlobalStyle = createGlobalStyle`
         display: flex;
         align-items: center;
     }
-        li {
-        padding-left: 6rem;
-        font-size: 1.4rem;
-        position: relative;
-        list-style: none;
-    }
+
 `;
 
 export default GlobalStyle;
