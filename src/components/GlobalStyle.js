@@ -25,6 +25,8 @@ const GlobalStyle = createGlobalStyle`
             color : white;
 
         }
+
+        
     }
     h2 {
             font-weight : lighter;
@@ -58,6 +60,7 @@ const GlobalStyle = createGlobalStyle`
     }
         li {
         padding-left: 6rem;
+        font-size: 1.4rem;
         position: relative;
         list-style: none;
     }

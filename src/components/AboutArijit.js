@@ -27,16 +27,24 @@ const AboutArijit = () => {
           <motion.h2 variants={fade}>Journey</motion.h2>
           <motion.div variants={LineAnim} className="line"></motion.div>
           <motion.p variants={fade}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque sint
-            veniam unde ut ratione blanditiis! Alias, facere? Quod, in!
-            Asperiores culpa assumenda quibusdam minima, aspernatur ut id hic
-            ea, dolore nulla ex necessitatibus iste?
+            Arijit's big break in Bollywood came with the song "Phir Mohabbat"
+            from the movie "Murder 2" in 2011. The song's success established
+            him as a prominent playback singer in the industry. His soulful and
+            emotive voice captured the hearts of millions, leading to a series
+            of chart-topping hits in Bollywood. Since then, Arijit Singh has
+            become one of India's most beloved and versatile playback singers,
+            delivering memorable songs across various genres. His ability to
+            convey emotions through his voice has earned him a massive fan
+            following and numerous awards for his contributions to Indian music.
+            Arijit's journey continues to inspire aspiring singers and music
+            enthusiasts worldwide.
           </motion.p>
         </div>
       </div>
     </About>
   );
 };
+
 // Animation Frame
 const Frame1 = styled(motion.div)`
   position: fixed;
@@ -60,8 +68,7 @@ const Frame4 = styled(Frame1)`
 const About = styled(motion.div)`
   display: flex;
   padding: 5rem 10rem;
-  justify-content: space-between;
-  min-height: 80vh;
+  min-height: 90vh;
   .main-img {
     height: 76vh;
     width: 100%;

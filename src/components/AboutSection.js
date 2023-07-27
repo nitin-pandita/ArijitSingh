@@ -7,6 +7,10 @@ import Wave from "./Wave";
 import { fade } from "../Animation";
 import { titleAnim } from "../Animation";
 import { PhotoAnim } from "../Animation";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTwitter } from "@fortawesome/free-brands-svg-icons"; // Import the Twitter icon
+import { faX } from "@fortawesome/free-solid-svg-icons";
+
 const AboutSection = () => {
   return (
     <About>
@@ -21,8 +25,14 @@ const AboutSection = () => {
             </motion.h2>
           </Hide>
         </motion.div>
-        <motion.p variants={fade}>Contact us for any query</motion.p>
-        <motion.button variants={fade}>Socials</motion.button>
+        <motion.p variants={fade}>Follow me on Twitter</motion.p>
+        <a href="https://twitter.com/nitintwts">
+          <motion.button variants={fade}>
+            Twitter{" "}
+            <FontAwesomeIcon className="twitter" icon={faTwitter} size="lg" />
+            {/* Use faTwitter icon */}
+          </motion.button>
+        </a>
       </Description>
       <Image variants={PhotoAnim}>
         <img src={home2} alt="Arijit Singh" />
