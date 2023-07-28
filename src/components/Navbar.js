@@ -1,38 +1,38 @@
-import { motion } from "framer-motion";
-import React from "react";
-import { Link } from "react-router-dom";
-import { styled } from "styled-components";
-import { useLocation } from "react-router-dom";
+import { motion } from 'framer-motion';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { styled } from 'styled-components';
+import { useLocation } from 'react-router-dom';
 const Navbar = () => {
   const { pathname } = useLocation();
   return (
     <Nav>
       <Logo>
-        <Link to="/">Arijit Singh</Link>
+        <Link to='/'>Arijit Singh</Link>
       </Logo>
       <ul>
         <li>
-          <Link to="/about">About</Link>
+          <Link to='/about'>About</Link>
           <Line
             transition={{ duration: 1 }}
-            initial={{ width: "0%" }}
-            animate={{ width: pathname === "/about" ? "50%" : "0%" }}
+            initial={{ width: '0%' }}
+            animate={{ width: pathname === '/about' ? '50%' : '0%' }}
           />
         </li>
         <li>
-          <Link to="/list">Popular Songs</Link>
+          <Link to='/list'>Popular Songs</Link>
           <Line
             transition={{ duration: 1 }}
-            initial={{ width: "0%" }}
-            animate={{ width: pathname === "/list" ? "50%" : "0%" }}
+            initial={{ width: '0%' }}
+            animate={{ width: pathname === '/list' ? '50%' : '0%' }}
           />
         </li>
         <li>
-          <Link to="/social">Socials</Link>
+          <Link to='/social'>Socials</Link>
           <Line
             transition={{ duration: 1 }}
-            initial={{ width: "0%" }}
-            animate={{ width: pathname === "/social" ? "50%" : "0%" }}
+            initial={{ width: '0%' }}
+            animate={{ width: pathname === '/social' ? '50%' : '0%' }}
           />
         </li>
       </ul>
@@ -57,12 +57,17 @@ const Nav = styled.div`
     display: inline-block;
   }
 
+  @media (max-width: 700px) {
+    ul {
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+  }
   @media (max-width: 1300px) {
     flex-direction: column;
     padding: 2rem 2rem;
 
     ul {
-      padding: 2rem;
       justify-content: center;
       width: 100%;
     }
@@ -74,8 +79,8 @@ const Nav = styled.div`
 const Logo = styled(motion.div)`
   font-weight: lighter;
   font-size: 1.7rem;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 `;
 
 const Line = styled(motion.div)`
